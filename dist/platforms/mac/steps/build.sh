@@ -149,7 +149,8 @@ echo ""
   -androidTargetSdkVersion "$ANDROID_TARGET_SDK_VERSION" \
   -androidExportType "$ANDROID_EXPORT_TYPE" \
   -androidSymbolType "$ANDROID_SYMBOL_TYPE" \
-  $CUSTOM_PARAMETERS
+  $CUSTOM_PARAMETERS |
+  tee $UNITY_PROJECT_PATH/unity-builder-build.log
 
 # Catch exit code
 BUILD_EXIT_CODE=$?
